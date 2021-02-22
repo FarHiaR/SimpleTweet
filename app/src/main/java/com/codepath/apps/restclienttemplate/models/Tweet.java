@@ -8,10 +8,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Tweet {
+    private static String createdAt;
     public String body;
-    public String createdAt;
+   // public String createdAt;
     public long id;
     public User user;
+    public TimeFormatter timeFormatter;
 
     public static Tweet fromJson(JSONObject jsonObject) throws JSONException {
         Tweet tweet = new Tweet();
@@ -29,4 +31,7 @@ public class Tweet {
         return tweets;
     }
 
+    public static String getFormattedTimestamp() {
+        return TimeFormatter.getTimeDifference(createdAt);
+    }
 }

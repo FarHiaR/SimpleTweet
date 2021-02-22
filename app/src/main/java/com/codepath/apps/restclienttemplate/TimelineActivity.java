@@ -12,6 +12,7 @@ import com.google.android.material.appbar.AppBarLayout;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
+import android.widget.ImageView;
 
 import com.codepath.apps.restclienttemplate.models.Tweet;
 import com.codepath.asynchttpclient.callback.JsonHttpResponseHandler;
@@ -46,7 +47,7 @@ public class TimelineActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         // Display icon in the toolbar
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setLogo(R.mipmap.ic_launcher_tweet);
+        getSupportActionBar().setLogo(R.mipmap.ic_launcher_twitter);
         getSupportActionBar().setDisplayUseLogoEnabled(true);
 
 
