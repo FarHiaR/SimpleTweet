@@ -34,7 +34,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src="walkthrough_simpleTweet.gif" title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src="walkthrough_simpleTweet.gif" title='Video Walkthrough' width=350px alt='Video Walkthrough' />
 
 GIF created with screen recording from phone and https://cloudconvert.com/mp4-to-gif
 
