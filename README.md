@@ -36,7 +36,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src="tweet2_wlk.gif" title='Video Walkthrough' width='450' alt='Video Walkthrough' />
+<img src="twitter2_wlk.gif" title='Video Walkthrough' width='450' alt='Video Walkthrough' />
 
 
 ## Notes
