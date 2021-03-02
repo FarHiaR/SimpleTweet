@@ -1,5 +1,7 @@
 package com.codepath.apps.restclienttemplate.models;
 
+import android.annotation.SuppressLint;
+
 import org.parceler.Parcel;
 
 import java.text.ParseException;
@@ -17,7 +19,12 @@ import java.util.TimeZone;
  */
 
 
+@Parcel
 public class TimeFormatter {
+
+    public TimeFormatter () {
+
+    }
 
     public static String getTimeDifference(String rawJsonDate) {
         String time = "";
@@ -70,7 +77,7 @@ public class TimeFormatter {
             then.setTime(format.parse(rawJsonDate));
             Date date = then.getTime();
 
-            SimpleDateFormat format1 = new SimpleDateFormat("h:mm a \u00b7 dd MMM yy");
+            @SuppressLint("SimpleDateFormat") SimpleDateFormat format1 = new SimpleDateFormat("h:mm a \u00b7 dd MMM yy");
 
             time = format1.format(date);
 

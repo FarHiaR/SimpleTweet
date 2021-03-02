@@ -25,8 +25,10 @@ public class Tweet {
     public long id;
 
     @ColumnInfo
-    //public static String createdAt;
     public String createdAt;
+
+  /*  @ColumnInfo
+    private static String created_At; */
 
     @ColumnInfo
     public String body;
@@ -37,6 +39,9 @@ public class Tweet {
     @Ignore
     public User user;
 
+    @Ignore
+    TimeFormatter timeFormatter;
+
     // empty constructor needed by the Parceler library
     public Tweet(){
 
@@ -46,16 +51,17 @@ public class Tweet {
         Tweet tweet = new Tweet();
         tweet.body = jsonObject.getString("text");
         tweet.createdAt = jsonObject.getString("created_at");
+      //  created_At = jsonObject.getString("created_at");
         tweet.id = jsonObject.getLong("id");
         User user=User.fromJson(jsonObject.getJSONObject("user"));
         tweet.user = user;
         tweet.userId=user.id;
         return tweet;
     }
-/*
-    public static String getFormattedTimestamp() {
-        return TimeFormatter.getTimeDifference(createdAt);
-    } */
+
+    public String getFormattedTimestamp() {
+        return timeFormatter.getTimeDifference(createdAt);
+    }
 
     public static List<Tweet> fromJsonArray(JSONArray jsonArray) throws JSONException {
         List<Tweet> tweets = new ArrayList<>();
