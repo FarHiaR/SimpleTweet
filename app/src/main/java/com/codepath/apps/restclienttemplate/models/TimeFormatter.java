@@ -1,5 +1,7 @@
 package com.codepath.apps.restclienttemplate.models;
 
+import org.parceler.Parcel;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -13,6 +15,8 @@ import java.util.TimeZone;
  * depending on how great the time difference between now and the given date is.
  * This, as of 2016-06-29, matches the behavior of the official Twitter app.
  */
+
+
 public class TimeFormatter {
 
     public static String getTimeDifference(String rawJsonDate) {
