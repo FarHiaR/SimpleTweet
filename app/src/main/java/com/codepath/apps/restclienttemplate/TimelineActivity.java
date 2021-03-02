@@ -65,7 +65,7 @@ public class TimelineActivity extends AppCompatActivity {
 
 
         client = TwitterApp.getRestClient(this);
-        final TweetDao tweetDao = ((TwitterApp) getApplicationContext()).getMyDatabase().tweetDao();
+        tweetDao = ((TwitterApp) getApplicationContext()).getMyDatabase().tweetDao();
 
 
 
